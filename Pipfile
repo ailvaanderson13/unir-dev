@@ -19,6 +19,9 @@ virtualenv = "==20.4.2"
 virtualenv-clone = "==0.5.4"
 whitenoise = "*"
 Django = "==3.1.7"
+django-environ = "*"
+psycopg2 = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
