@@ -1,0 +1,13 @@
+appdirs
+asgiref
+certifi
+distlib
+Django
+filelock
+pipenv
+pytz
+six
+sqlparse
+virtualenv
+virtualenv-clone
+whitenoise

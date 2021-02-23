@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Unir - Acessível</title>
+    <link rel="icon" type="image/x-icon" href="../../../../static/assets/img/icon.ico" />
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link href="../../../../static/assets/css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <img src="../../../../static/assets/img/logos/logo-azul.png" alt="Unir-acessivel">
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ml-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#quemsomos">Quem somos?</a></li>
+                <!--                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>-->
+                <!--                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Equipe</a></li>-->
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Estrutura</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#disponibilidade">Disponibilidade</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contato">Contato</a></li>
+                <li><button type="button" class="btn nav-item nav-link text-white" data-toggle="modal" data-target="#modalajuda">AJUDA</button></li>
+<!--                <li class="nav-item"><a href="{% url 'utils:acessar' %}" class="btn btn-primary text-white bg-primary">LOGIN</a></li>-->
+                <!--                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contato</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="masthead">
+    <div class="container">
+        <div class="masthead-subheading">Bem vindo(a)!</div>
+        <div class="masthead-heading text-uppercase">Muito Prazer!</div>
+        <!--        <a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="#contato">Chamar motorista!</a>-->
+    </div>
+    <style>
+        .#swal2-content {
+            text-align: left!important;
+
+        }
+        .swal2-content {
+            padding: 0!important;
+        }
+        .label-container{
+            position:fixed;
+            bottom:48px;
+            right:105px;
+            display:table;
+            visibility: hidden;
+        }
+
+        .label-text{
+            color:#FFF;
+            background:rgba(51,51,51,0.5);
+            display:table-cell;
+            vertical-align:middle;
+            padding:10px;
+            border-radius:3px;
+        }
+
+        .label-arrow{
+            display:table-cell;
+            vertical-align:middle;
+            color:#333;
+            opacity:0.5;
+        }
+        .float{
+            position:fixed;
+            width:90px;
+            height:45px;
+            bottom:50px;
+            right:40px;
+            background-color: #0a85d9;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+            font-size: 12px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 999!important;
+            text-decoration: none;
+            cursor: pointer;
+            -webkit-animation: pulse 1.8s infinite;
+        }
+        @-webkit-keyframes pulse  {
+            0% {
+            @include transform(scale(0.9));
+            }
+            70% {
+            @include transform(scale(1));
+                box-shadow: 0 0 0 20px rgba(83,125,145,0.3);
+            }
+            100% {
+            @imclude transform(scale(0.9));
+                box-shadow: 0 0 0 0 rgba(83,125,145,0.1);
+            }
+        }
+        .my-float{
+            font-size:24px;
+            margin-top:11px;
+        }
+
+        a.float + div.label-container {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s ease;
+        }
+
+        a.float:hover + div.label-container{
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</header>
+<section class="page-section" id="quemsomos">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Quem somos?</h2>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-exclamation fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Sobre Nós</h4>
+                <p class="text-muted">A <i><b>Unir-Acessível</b>, chegou em 2021, para inovar o mercado de transporte de passageiros que necessitam de transporte em um veiculo adaptado e também aos passageiros comuns.</i></p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-map-marked-alt fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Onde Atuamos?</h4>
+                <p class="text-muted"><i>Hoje, atuamos em toda cidade de São Paulo, experimente agora mesmo!</i></p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-question fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Como Funciona?</h4>
+                <p class="text-muted"><i>Se você é um(a) passageiro(a) de primeira viagem, não se preocupe, o processo é bem simples. Acompanhe o passo a passo:</i></p>
+                <ul class="text-left text-muted">
+                    <i>
+                        <li><b>1</b> - Clique no botão <b>"Chamar motorista"</b>.</li>
+                        <li><b>2</b> - Realize seu cadastro.</li>
+                        <li><b>3</b> - Preencha os dados da viagem e PRONTO!</li>
+                        <li><b>4</b> - Após realizar esse passo a passo, receberá em instantes os dados do seu motorista!</li>
+                    </i>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Nossa Estrutura</h2>
+            <h3 class="section-subheading text-muted">Confira abaixo nosso diferencial!</h3>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"><img style="width: 120%; height: auto" src="../../../../static/assets/img/about/img3.jpg" alt="" /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4><i>Segurança!</i></h4>
+                        <h4 class="subheading">Nossos veículos são seguros.</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">As operações de ancoragem da cadeira de rodas e do cadeirante são rápidas e simples. Ancoragem com cinto de segurança de três pontos.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img style="width: 120%; height: auto" src="../../../../static/assets/img/about/img2.jpg" alt="" /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4><i>Conforto!</i></h4>
+                        <h4 class="subheading">Do embarque ao desembarque!</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Você que nos escolheu para realizar a sua viagem, tenha certeza, que faremos com muito prazer e lhe proporcionaremos nesse pequeno momento, todo conforto!</p></div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</section>
+<hr>
+<div class="row" id="disponibilidade">
+    <div class="col">
+        <h2 class="text-center">Dias e horários de funcionamento</h2>
+    </div>
+</div>
+<br>
+<div class="row text-center">
+    <div class="col text-center">
+        <table class="table table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl table-bordered table-hover ">
+            <tr class="bg-dark text-white">
+                <th>Dia da semana</th>
+                <th>Horário de funcionamento</th>
+            </tr>
+            <tr>
+                <td>Segunda-feira</td>
+                <td>Das 06h00 às 18h00 corrida instantânea / Das 19h00 às 05h00 perante agendamento antecipado.</td>
+            </tr>
+            <tr>
+                <td>Terça-feira</td>
+                <td>Das 06h00 às 18h00 corrida instantânea / Das 19h00 às 05h00 perante agendamento antecipado.</td>
+            </tr>
+            <tr>
+                <td>Quarta-feira</td>
+                <td>Das 06h00 às 18h00 corrida instantânea / Das 19h00 às 05h00 perante agendamento antecipado.</td>
+            </tr>
+            <tr>
+                <td>Quinta-feira</td>
+                <td>Das 06h00 às 18h00 corrida instantânea / Das 19h00 às 05h00 perante agendamento antecipado.</td>
+            </tr>
+            <tr>
+                <td>Sexta-feira</td>
+                <td>Das 06h00 às 18h00 corrida instantânea / Das 19h00 às 05h00 perante agendamento antecipado.</td>
+            </tr>
+            <tr>
+                <td>Sábado</td>
+                <td>Das 06h00 às 18h00 corrida instantânea / Das 19h00 às 05h00 perante agendamento antecipado.</td>
+            </tr>
+            <tr>
+                <td>Domingo</td>
+                <td>Das 06h00 às 18h00 corrida instantânea / Das 19h00 às 05h00 perante agendamento antecipado.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<br>
+<hr>
+<div class="row text-center">
+    <div class="col">
+        <h2>Contato</h2>
+    </div>
+</div>
+<div class="row text-center" id="contato">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <i>E-mail</i><p class=" text-primary">unir.acessivel@gmail.com</p>
+    </div>
+<!--    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">-->
+<!--        <i>Telefone</i><p class="text-muted"></p>-->
+<!--    </div>-->
+</div>
+<hr>
+<div class="modal fade" id="modalajuda" tabindex="-1" role="dialog"aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">DÚVIDAS FREQUENTES <i class="fa fa-question"></i></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <button class="btn" data-toggle="collapse" data-target="#demo">
+                    <p class="text-primary"><b>1</b> - Realizei todo procedimente para chamar um carro, mas não recebi as informações do motorista!</p>
+                </button>
+                <div id="demo" class="collapse text-muted m-md-1">
+                    <li>Verifique as informações enviadas ao site no momento do seu cadastro.</li>
+                </div>
+                <button class="btn" data-toggle="collapse" data-target="#duvida">
+                    <p class="text-primary"><b>2</b> - É possível realizar o agendamento ou chamar meu carro via ligação ou WHASTAPP?</p>
+                </button>
+                <div id="duvida" class="collapse text-left m-md-1 text-muted">
+                    Hoje nossos agendamentos são realizado apenas pela plataforma, ainda não sabe como fazer isso? <br>
+                    Segue nosso passo a passo:
+                    <li><b>1</b> - Clique no botão <b>"Chamar motorista"</b>.</li>
+                    <li><b>2</b> - Realize seu cadastro.</li>
+                    <li><b>3</b> - Preencha os dados da viagem e PRONTO!</li>
+                    <li><b>4</b> - Após realizar esse passo a passo, receberá em instantes os dados do seu motorista!</li>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="float">-->
+<!--    &lt;!&ndash;    <i class="fas fa-phone my-float"></i>&ndash;&gt;-->
+<!--    <p>CHAMAR MOTORISTA</p>-->
+<!--</div>-->
+<!--<div class="label-container">-->
+<!--    <div class="label-text"></div>-->
+<!--    <i class="fa fa-play label-arrow"></i>-->
+<!--</div>-->
+<footer class="footer py-4">
+    <div class="container footer-class text-white">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-lg-left">Copyright © Unir-Acessível 2021</div>
+            <div class="col-lg-4 my-3 my-lg-0">
+                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                <!--                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>-->
+                <!--                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>-->
+            </div>
+            <!--            <div class="col-lg-4 text-lg-right">-->
+            <!--                <a class="mr-3" href="#!">Política de Privacidade</a>-->
+            <!--                <a href="#!">Termos de Uso</a>-->
+            <!--            </div>-->
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Contact form JS-->
+<script src="../../../../static/assets/mail/jqBootstrapValidation.js"></script>
+<script src="../../../../static/assets/mail/contact_me.js"></script>
+<!-- Core theme JS-->
+<script src="../../../../static/assets/js/scripts.js"></script>
+</body>
+</html>
