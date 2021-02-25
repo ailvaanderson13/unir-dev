@@ -3,6 +3,33 @@ from .models import User
 
 
 class UserForm(forms.ModelForm):
+    first_name = forms.CharField(
+        label='Primeiro nome',
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control', 'placeholder': 'insira seu nome'
+            }
+        )
+    )
+
+    last_name = forms.CharField(
+        label='Sobrenome',
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control', 'placeholder': 'Insira seu sobrenome'
+            }
+        )
+    )
+
+    email = forms.CharField(
+        label='E-mail',
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control', 'placeholder': 'Insira seu e-email'
+            }
+        )
+    )
+
     celular = forms.CharField(
         required=True,
         label='Celular',
@@ -21,6 +48,33 @@ class UserForm(forms.ModelForm):
 
 
 class UserAdminForm(forms.ModelForm):
+    first_name = forms.CharField(
+        label='Primeiro nome',
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control', 'placeholder': 'insira seu nome'
+            }
+        )
+    )
+
+    last_name = forms.CharField(
+        label='Sobrenome',
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control', 'placeholder': 'Insira seu sobrenome'
+            }
+        )
+    )
+
+    email = forms.CharField(
+        label='E-mail',
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control', 'placeholder': 'Insira seu e-email'
+            }
+        )
+    )
+
     celular = forms.CharField(
         required=False,
         label='Celular',
@@ -33,30 +87,30 @@ class UserAdminForm(forms.ModelForm):
 
     reset_password = forms.BooleanField(
         required=False,
-        label='RESETAR SENHA',
+        label='Redefinir Senha',
         widget=forms.CheckboxInput(
             attrs={
-                'class': 'form-control',
+                'class': 'form-check'
             }
         )
     )
 
     motorista = forms.BooleanField(
         required=False,
-        label='MOTORISTA',
+        label='Motorista',
         widget=forms.CheckboxInput(
             attrs={
-                'class': 'form-control'
+                'class': 'form-check'
             }
         )
     )
 
     passageiro = forms.BooleanField(
         required=False,
-        label='PASSAGEIRO',
+        label='Passageiro',
         widget=forms.CheckboxInput(
             attrs={
-                'class': 'form-control'
+                'class': 'form-check'
             }
         )
     )

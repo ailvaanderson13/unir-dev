@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     celular = models.CharField(max_length=11, blank=True, null=True)
-    reset_password = models.BooleanField(default=True)
+    reset_password = models.BooleanField(default=False)
     motorista = models.BooleanField(default=False)
     passageiro = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)

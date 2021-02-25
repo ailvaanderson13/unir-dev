@@ -1,15 +1,13 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
-    <form class="form-horizontal">
+    <form class="form-horizontal" method="POST">
         {% csrf_token %}
         {% for c in form %}
-            <div class="form-group">
-                <div class="row">
-                    <div class="col">
-                        {{ c.label }}
+            <div class="form-group mb-4">
+                <div class="col">
+                    <label class="col-md-12 p-0">{{ c.label }}</label>
                         {{ c }}
-                    </div>
                 </div>
             </div>
         {% endfor %}
