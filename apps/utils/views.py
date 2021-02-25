@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from apps.utils.forms import LoginForm
 
+def home_page(request):
+    return render(request, 'page_initial/home_page.html')
 
 def page_inital(request):
-    return render(request, 'page_initial/home.html')
+    return render(request, 'page_initial/site.html')
 
 
 def acessar(request):
